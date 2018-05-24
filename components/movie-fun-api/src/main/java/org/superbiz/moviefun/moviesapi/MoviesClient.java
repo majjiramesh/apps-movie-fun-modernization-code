@@ -1,5 +1,6 @@
 package org.superbiz.moviefun.moviesapi;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -11,6 +12,7 @@ import static org.springframework.http.HttpMethod.GET;
 public class MoviesClient {
 
     private String moviesUrl;
+  
     private RestOperations restOperations;
 
     private static ParameterizedTypeReference<List<MovieInfo>> movieListType = new ParameterizedTypeReference<List<MovieInfo>>() {
